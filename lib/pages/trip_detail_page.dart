@@ -30,17 +30,17 @@ class TripDetailPage extends StatelessWidget {
                 children: [
                   Text(
                     trip.title,
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 12),
                   Text(
                     "\$${trip.price}",
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 20,),
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    trip.description,
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    trip.summary,
+                    style: const TextStyle(fontSize: 20, color: Colors.grey),
                   ),
                   const SizedBox(height: 12),
                   Row(
@@ -56,6 +56,31 @@ class TripDetailPage extends StatelessWidget {
                         style: const TextStyle(fontSize: 18),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    "Review:",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    trip.review,
+                    style: const TextStyle(fontSize: 20),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    trip.tnc,
+                    style: const TextStyle(fontSize: 20),
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    "Total Price:",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "\$${trip.price + 100}" ,
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               )
